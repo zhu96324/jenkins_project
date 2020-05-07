@@ -18,3 +18,8 @@ class TestSearch:
     @pytest.mark.parametrize("text", ["xiaoming", "hello"])
     def test_search(self, text):
         self.page_search.page_search(text)
+
+    @allure.feature("测试出错")
+    def test_text(self):
+        print("----出错了")
+        assert 0
